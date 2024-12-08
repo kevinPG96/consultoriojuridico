@@ -1,0 +1,180 @@
+<html><head><base href="." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Servicios Jurídicos</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Playfair Display', 'Times New Roman', serif;
+        font-style: italic;
+    }
+
+    body {
+        background-color: #f8f5f2;
+    }
+
+    .header {
+        background-color: #5c4741;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .logo {
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    .main-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        position: relative;
+    }
+
+    .bio-section {
+        margin-bottom: 30px;
+    }
+
+    h1 {
+        color: #3c2a26;
+        margin-bottom: 20px;
+        font-size: 2.5rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+    }
+
+    h2 {
+        color: #6b4f48;
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+    }
+
+    p {
+        color: #7d5d57;
+        line-height: 1.8;
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+        letter-spacing: 0.2px;
+    }
+
+    .education p, .achievements p {
+        line-height: 2;
+    }
+
+    .services-button {
+        background-color: #5c4741;
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        margin: 20px 0;
+        transition: all 0.3s ease;
+    }
+
+    .services-button:hover {
+        background-color: #3c2a26;
+    }
+
+    .services-list {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .services-list.active {
+        max-height: 500px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .service-item {
+        padding: 10px 0;
+        border-bottom: 1px solid #e8d8d3;
+        color: #7d5d57;
+    }
+
+    .service-item:last-child {
+        border-bottom: none;
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2rem;
+        }
+        
+        h2 {
+            font-size: 1.3rem;
+        }
+        
+        p {
+            font-size: 1rem;
+        }
+    }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <svg class="logo" viewBox="0 0 200 100">
+            <rect x="20" y="20" width="60" height="60" fill="#8b6b61"/>
+            <text x="90" y="60" fill="white" font-size="24" font-family="Playfair Display" font-style="italic">LEGAL</text>
+        </svg>
+    </header>
+
+    <main class="main-content">
+        <section class="bio-section">
+            <h1>Élite Jurídica Integral</h1>
+            <h2>Dr.María Paz Castanie </h2>
+            
+            <button class="services-button">Ver Servicios Legales</button>
+            <div class="services-list">
+                <div class="service-item">• Asesoría Legal Corporativa</div>
+                <div class="service-item">• Contratos Comerciales</div>
+                <div class="service-item">• Fusiones y Adquisiciones</div>
+                <div class="service-item">• Derecho Laboral Empresarial</div>
+                <div class="service-item">• Propiedad Intelectual</div>
+                <div class="service-item">• Litigios Comerciales</div>
+                <div class="service-item">• Cumplimiento Normativo</div>
+                <div class="service-item">• Reestructuración Empresarial</div>
+            </div>
+
+            <div class="experience">
+                <h2>Direccion</h2>
+                <p>Remigio Tamariz entre Guayas y Galápagos</p>
+            </div>
+
+            <div class="education">
+                <h2>Educación</h2>
+                <p>Universidad Catolica de Cuenca</p>
+            </div>
+
+            <div class="achievements">
+                <h2>
+                <p></p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.querySelector('.services-button').addEventListener('click', function() {
+            const servicesList = document.querySelector('.services-list');
+            servicesList.classList.toggle('active');
+            
+            if (servicesList.classList.contains('active')) {
+                this.textContent = 'Ocultar Servicios';
+            } else {
+                this.textContent = 'Ver Servicios Legales';
+            }
+        });
+    </script>
+</body>
+</html>
